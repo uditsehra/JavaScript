@@ -33,4 +33,4 @@ function toPigLatin(str){
     }
 }
 
-console.log(toPigLatin('contrast'))
+console.log(toPigLatin('rhythm'))   //  rhythmay
