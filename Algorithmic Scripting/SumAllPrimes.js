@@ -17,6 +17,24 @@ function isPrime(num)
   return true
 }
 
+// Or we can use Sieve Of Erathosthenes Primes to get Primes
+function getPrime(num){
+    var sieve = []
+    var i;
+    var j;
+
+    var prime = []
+    for(i=2; i<=num; i++){
+        if(!sieve[i]){
+            prime.push(i);
+            for(j=i<<1; j<=num; j+=i){
+                sieve[j] = true
+            }
+        }
+    }
+    return prime
+}
+
 function sumPrimes(num) {
   var i=2
   var sum =0
@@ -31,3 +49,4 @@ function sumPrimes(num) {
 }
 
 console.log(sumPrimes(977))
+console.log(getPrime(977))
