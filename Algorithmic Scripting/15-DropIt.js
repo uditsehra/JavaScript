@@ -20,4 +20,3 @@ function dropElements(arr, func) {
 }
 
 var r = dropElements([1, 2, 3], function(n) {return n < 3; });
-console.log(r)
